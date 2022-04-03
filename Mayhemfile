@@ -1,0 +1,12 @@
+project: stringformatter/nanorand-rs
+target: nanorand-rs
+
+cmds:
+  - cmd: /chacha20
+  - cmd: /range
+  - cmd: /chacha20-m
+  - cmd: /range-m
+  - cmd: /chacha20-dev
+  - cmd: /range-dev
+  - cmd: /chacha20-m-dev
+  - cmd: /range-m-dev
