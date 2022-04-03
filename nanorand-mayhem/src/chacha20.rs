@@ -53,7 +53,7 @@ fn main() {
    let nlen = nonce_s.len();
 
    if klen == 0 || nlen == 0 {
-       println!("Usage: ./{} KEY NONCE", pname);
+       println!("Usage: {} KEY NONCE", pname);
        return ();
    }
    let key_b = key_s.as_bytes();
