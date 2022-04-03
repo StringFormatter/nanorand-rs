@@ -1,0 +1,27 @@
+
+[package]
+name = "nanorand-mayhem"
+version = "0.0.0"
+authors = ["StringFormatter"]
+publish = false
+edition = "2021"
+
+[dependencies]
+nanorand = { path = ".." }
+c2-chacha = "0.3.1"
+
+# Prevent this from interfering with workspaces
+[workspace]
+members = ["."]
+
+[[bin]]
+name = "chacha20"
+path = "src/chacha20.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "range"
+path = "src/range.rs"
+test = false
+doc = false
