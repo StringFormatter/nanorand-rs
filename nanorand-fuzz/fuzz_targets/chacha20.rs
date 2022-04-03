@@ -27,7 +27,7 @@ fuzz_target!(|data: ([u8; KEY_LEN], [u8; NONCE_LEN])| {
 		let mut keystream: Vec<u8> = Vec::with_capacity(reference_keystream.len());
 
 		while reference_keystream.len() > keystream.len() {
-			chacha::chacha_block(20, state)
+			chacha::chacha_block::<20>(state)
 				.iter()
 				.for_each(|packed| keystream.extend_from_slice(&packed.to_le_bytes()));
 			chacha::chacha_increment_counter(&mut state);
